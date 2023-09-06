@@ -76,6 +76,7 @@ export async function deleteGame(gameID) {
   }
 }
 export async function longPoll(gameID) {
+    console.log("longPoll(",gameID,")");
   try {
     const response = await fetch(`${API_BASE}long/${gameID}`);
     const data = await response.json();
@@ -83,5 +84,27 @@ export async function longPoll(gameID) {
     return data;
   } catch (error) {
     console.log(error, " longpoll");
+  }
+}
+export async function updateAPI(gameID,player1turn,newBoard) {
+    console.log("updateAPI");
+
+  try {
+
+    let res = await fetch(`${API_BASE}lists/${gameID}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        board: newBoard,
+        player1turn: !player1turn,
+        initial: false,
+      }),
+    });
+      let data = res.json();
+      console.log(data, "data inne i updateAPI");
+  } catch (error) {
+    console.log(error);
   }
 }

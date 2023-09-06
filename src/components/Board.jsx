@@ -14,18 +14,21 @@ function Board({ game, updateBoard, player }) {
       <div className="flex gap-2">
         <Square
           updateBoard={updateBoard}
+          player1turn={game.player1turn}
           value={board[0]}
           player={player}
           id="0"
         />
         <Square
           updateBoard={updateBoard}
+          player1turn={game.player1turn}
           value={board[1]}
           player={player}
           id="1"
         />
         <Square
           updateBoard={updateBoard}
+          player1turn={game.player1turn}
           value={board[2]}
           player={player}
           id="2"
@@ -34,18 +37,21 @@ function Board({ game, updateBoard, player }) {
       <div className="flex gap-2">
         <Square
           updateBoard={updateBoard}
+          player1turn={game.player1turn}
           value={board[3]}
           player={player}
           id="3"
         />
         <Square
           updateBoard={updateBoard}
+          player1turn={game.player1turn}
           value={board[4]}
           player={player}
           id="4"
         />
         <Square
           updateBoard={updateBoard}
+          player1turn={game.player1turn}
           value={board[5]}
           player={player}
           id="5"
@@ -54,18 +60,21 @@ function Board({ game, updateBoard, player }) {
       <div className="flex gap-2">
         <Square
           updateBoard={updateBoard}
+          player1turn={game.player1turn}
           value={board[6]}
           player={player}
           id="6"
         />
         <Square
           updateBoard={updateBoard}
+          player1turn={game.player1turn}
           value={board[7]}
           player={player}
           id="7"
         />
         <Square
           updateBoard={updateBoard}
+          player1turn={game.player1turn}
           value={board[8]}
           player={player}
           id="8"
